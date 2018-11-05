@@ -12,3 +12,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.Quality{
+  width: 90px;
+  height: 92px;
+  background: #ccc;
+  clip-path: url(#svgPathQuality);
+  position: relative;
+  margin: auto;
+}
+.Quality > .ratingFill {
+  display: block;
+  width: 100%;
+  transition: all 1s;
+  position: absolute;
+  bottom: 0;
+}
+.QualityNumber{
+  width: 90px;
+  height: 92px;
+  background: blue;
+  clip-path: url(#ratingSVGQuality);
+}
+.QualityNumber > .numberFill {
+  display: block;
+  width: 100%;
+  transition: all 1s;
+  position: absolute;
+  top: -13px;
+  left: 10px;
+}
+.container{
+  margin-left: 40px;
+}

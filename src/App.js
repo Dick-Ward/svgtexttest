@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import './index.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+  state = {
+    rating: 1
   }
+
+  addOne = () =>{
+    this.setState({rating: this.state.rating + 1})
+  }
+
+render(){
+  return (
+      <div className="container" onClick={this.addOne}>
+        <svg style={{width: 0, height: 0}}>
+          <clipPath id="ratingSVGQuality">
+             <text className="smallSVGText" y="72">{this.state.rating}</text>
+          </clipPath>
+        </svg>
+        <div>
+          <div>
+            <div className="QualityNumber">
+            </div>
+          </div>
+         <p style={{color: "green"}}>{this.state.rating}</p>
+        </div>
+        SVG text blue, regular text green.  Click to increment
+      </div>
+  )}
 }
 
 export default App;
