@@ -26,7 +26,9 @@ render(){
           </div>
          <p style={{color: "green"}}>{this.state.rating}</p>
         </div>
-        SVG text blue, regular text green.  Click to increment
+        <div>SVG text blue, regular text green.  Click to increment</div>
+        <br />
+        <div>Currently Using React {React.version}</div>
       </div>
   )}
 }
